@@ -1,0 +1,1 @@
+$( "p" ).last().addClass( "selected" );

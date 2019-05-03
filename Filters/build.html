@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Filters</title>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+window.onload=function(){{
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+}};
+</script>
+</head>
+<body>
+    <input id="myInput" />
+
+<table id="myTable">
+    <tr>
+        <th>#</th>
+        <th>name</th>
+    </tr>
+    <tr><td>1</td><td>name1</th></tr>
+    <tr><td>2</td><td>name2</th></tr>
+    <tr><td>3</td><td>name3</th></tr>
+</table>
+</body>
+</html>

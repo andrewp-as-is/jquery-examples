@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>_hidden</title>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+window.onload=function(){{
+// In some browsers :hidden includes head, title, script, etc...
+var hiddenElements = $( "body" ).find( ":hidden" ).not( "script" );
+
+$( "span:first" ).text( "Found " + hiddenElements.length + " hidden elements total." );
+$( "div:hidden" ).show( 3000 );
+$( "span:last" ).text( "Found " + $( "input:hidden" ).length + " hidden inputs." );
+}};
+</script>
+</head>
+<body>
+    <span></span>
+<div></div>
+<div style="display:none;">Hider!</div>
+<div></div>
+
+<div class="starthidden">Hider!</div>
+<div></div>
+
+<form>
+  <input type="hidden">
+  <input type="hidden">
+  <input type="hidden">
+</form>
+
+<span></span>
+</body>
+</html>

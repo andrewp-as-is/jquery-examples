@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>addClass()</title>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+p {
+    margin: 8px;
+    font-size: 16px;
+  }
+  .selected {
+    color: blue;
+  }
+  .highlight {
+    background: yellow;
+  }
+</style>
+<script type="text/javascript">
+window.onload=function(){{
+$( "p" ).last().addClass( "selected" );
+}};
+</script>
+</head>
+<body>
+    <p>Hello</p>
+<p>and</p>
+<p>Goodbye</p>
+</body>
+</html>
